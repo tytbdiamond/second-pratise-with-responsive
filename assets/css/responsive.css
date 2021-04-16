@@ -1,0 +1,94 @@
+/* small smart phone */
+@media (max-width: 499px) {
+    .s-0 {
+        display: none !important;
+    }
+    .header-content {
+        flex-wrap: wrap !important;
+        height: auto !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    .body-content,.sub-header-content,.header-content {
+        width: 100% !important;
+    }
+    .footer-content {
+        width: 100% !important;
+    }
+    .s-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col {
+        padding: 0 2px !important;
+    }
+    .row {
+        margin: 0 -2px !important;
+    }
+    .footer-intro-list {
+        margin-right: 1px !important;
+    }
+    .s-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .footer-intro {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+/* smartphone */
+@media (min-width:500px) and (max-width: 739px) {
+    .body-content,.sub-header-content,.header-content {
+        width: 100% !important;
+    }
+    .footer-content {
+        width: 100% !important;
+    }
+    * {
+        --sub-header-height: 92px !important;
+    }
+    .sub-header-content {
+        line-height: calc(var(--sub-header-height)/2) !important;
+    }
+    .sub-header-nav-item {
+        height:calc(var(--sub-header-height)/2) !important ;
+        line-height: calc(var(--sub-header-height)/2) !important;
+    }
+    .sub-nav-movie-wrapper {
+        width: 500px !important;
+    }
+    .body-content {
+        margin: 0 !important;
+    }
+    .footer-intro-list {
+        margin-right: 10px !important;
+    }
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .left-side-new-movie-list-wrapper {
+        justify-content: center !important;
+    }
+    .body-content,.sub-header-content,.header-content {
+        width: 800px !important;
+    }
+    .footer-content {
+        width: 800px !important;
+    }
+    .footer-contact {
+        margin-right: 30px !important;
+    }
+}
+/* PC low resolution */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    
+}
+
+/* Normal PC */
+@media (min-width: 1200px) {
+
+}

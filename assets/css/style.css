@@ -1,0 +1,1230 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --sub-header-height : 46px;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Header */
+.header {
+    background-color: #3f3e43;
+    border-bottom: 4px solid #d9cd47;
+}
+.header-content {
+    height: 75px;
+    width: 980px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.header-logo {
+    text-decoration: none;
+    display: block;
+    margin-left: -10px;
+}
+.header-logo-img {
+    width: 260px;
+    height: 55px;
+}
+.header-input {
+    width: 325px;
+    height: 36px;
+    position: relative;
+    margin-left: 46px;
+}
+.header-input-box {
+    width: 100%;
+    height: 36px;
+    outline: none;
+    border: 1px;
+    background-color: #303137;
+    border-radius: 100px;
+    color: #9f9f9f;
+    display: inline-block;
+    box-shadow: inset 1px 1px 1px rgb(0 0 0 / 40%), 1px 1px 0 rgb(255 255 255 / 15%);
+    font-size: 14px;
+    padding: 8px 40px 8px 15px;
+}
+.header-search-btn {
+    color: #FFF;
+    background-color: #0c4fe8;
+    padding: 9px;
+    border-radius: 100px;
+    font-size: 16px;
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    cursor: pointer;
+}
+
+/* Sub-header */
+.sub-header {
+    height: var(--sub-header-height);
+    background-color: #323031;
+}
+.sub-header-content {
+    width: 980px;
+    height: var(--sub-header-height);
+    line-height: var(--sub-header-height);
+    margin: 0 auto;
+}
+.sub-header-nav-list {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+.sub-header-nav-item-wrapper {
+    height: 218px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.sub-header-nav-item {
+    height: var(--sub-header-height);
+    line-height: var(--sub-header-height);
+    padding: 0 10px;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #1a1a1a;
+    position: relative;
+}
+.sub-header-nav-item:hover {
+    background: #292929;
+    color: #dacb46;
+    cursor: pointer;
+}
+/* sub-nav-movie */
+.sub-nav-movie-wrapper {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    background: #292929;
+    padding: 5px;
+    border: 1px solid #79777A;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    width: 828px;
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: top left;
+    transition: transform linear 0.1s;
+    z-index: 1;
+}
+.sub-header-nav-item:hover .sub-nav-movie-wrapper {
+    transform: scale(1);
+    opacity: 1;
+}
+.other-col {
+    padding-right: 24px;
+}
+.other-col2 {
+    padding-right: 182px;
+}
+.sub-nav-movie-item {
+    width: 160px;
+    color: #fff;
+    padding: 7px 10px;
+    display: block;
+    font: 13px/17px Arial,Helvetica,sans-serif;
+    text-shadow: 1px 1px 1px #1a1a1a;
+    text-transform: none;
+    margin-top: 4px;
+}
+.sub-nav-movie-item:hover { 
+    background-color: rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+/* slider */
+
+.body {
+    background-color: #545256;
+    padding-bottom: 30px;
+}
+.body-content {
+    width: 980px;
+    margin: 0 auto;
+}
+.body-slider {
+    padding-top: 26px;
+}
+.main-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.main-title {
+    display: block;
+    width: 100%;
+    color: #dacb46;
+    text-shadow: 1px 1px 1px #1a1a1a;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #88868a;
+    padding-bottom: 2px;
+    margin: 10px 0 5px;
+    position: relative;
+}
+.see-all {
+    color: #ddd;
+    font-size: 14px;
+    position: absolute;
+    display: flex;
+    top: 6px;
+    right: 0;
+    cursor: pointer;
+}
+.see-all-text {
+    text-transform: none;
+}
+.see-all:hover .see-all-text {
+    color: #dacb46;
+}
+.see-all-icon {
+    font-size: 16px;
+    margin-left: 6px;
+}
+.slider-wrapper {
+    height: 330px;
+    width: 100%;
+    background-color:#1c1c1c ;
+    border-bottom: 1px solid #868489;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+.changeslider {
+    display: none;
+}
+.changeslider:checked ~ .slider-wrapper {
+    justify-content: flex-end;
+}
+.slide-turn-btn {
+    position: absolute;
+    padding: 30px 10px;
+    background-color: rgba(0,0,0,0.6);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+}
+.slide-turn-btn:hover {
+    background-color: rgba(0,0,0,0.9);
+}
+.turn-left {
+    left: 15px;
+}
+.slide-turn-icon {
+    color: #fff;
+    font-size: 24px;
+}
+
+.turn-right {
+    right: 15px;
+}
+.slider-general {
+    width: 950px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.slider-general:last-child {
+    margin-top: 15px;
+}
+.slider-movie-item {
+    height: 300px;
+    width: 225px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    cursor: pointer;
+}
+.slider-movie-item:hover .slider-movie-item-name-vie {
+    color: #dacb46;
+}
+.slider-movie-bg1 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/11624/poster.thumb.jpg') no-repeat center / cover ;
+}
+.slider-movie-bg2 {
+    background:  url('https://i3.wp.com/image.phimmoi.net/film/12340/poster.thumb.jpg') no-repeat center / cover  ;
+}
+.slider-movie-bg3 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12439/poster.thumb.jpg')  no-repeat center / cover ;
+}
+.slider-movie-bg4 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12432/poster.thumb.jpg') no-repeat center / cover  ;
+}
+.slider-movie-bg5 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12491/poster.thumb.jpg') no-repeat center / cover ;
+}
+.slider-movie-bg6 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12481/poster.thumb.jpg') no-repeat center / cover ;
+}
+.slider-movie-bg7 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/4997/poster.thumb.jpg')  no-repeat center / cover ;
+}
+.slider-movie-bg8 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12472/poster.thumb.jpg') no-repeat center / cover ;
+}
+.slider-movie-item-name {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0,0,0,0.8);
+    margin-bottom: 2px;
+}
+.slider-movie-item-name-vie {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    color: #FF8040;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 5px 0;
+}
+.slider-movie-item-name-eng {
+    white-space: nowrap;
+    color: #fff;
+    font-size: 12px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin: 5px 0;
+}
+.slider-movie-item-quality {
+    color: #fff;
+    background-color: #A21D0A;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px;
+    position: absolute;
+    top: 10px;
+    left: 2px;
+}
+.slider-movie-item-quality::after {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #A21D0A;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+.slider-movie-item-voiceover {
+    color: #111;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    background: #E3B71E;
+    border-radius: 1px;
+    position: absolute;
+    right: 6px;
+    bottom: 66px;
+}
+/* Under slider */
+.under-slider {
+    margin-top: 16px;
+    padding: 0 3px;
+}
+/* left-side */
+
+.left-side-new-movie-list-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.empty-box {
+    background-color: #1f1f1f;
+    height: 600px;
+    width: 300px;
+}
+.new-movie-list-tab {
+    margin-left: 10px;
+}
+.new-movie-list-wrapper {
+    display: flex;
+}
+.new-movie-genre {
+    display: block;
+    background-color: #2E2E2E;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #b9b9b9;
+    cursor: pointer;
+    position: relative;
+}
+.new-movie-genre-list {
+    width: 360px;
+    height: 560px;
+    background-color: #191919;
+    padding: 10px;
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+.genre-list-2 {
+    left: -120px;
+}
+.genre-list-3 {
+    right: 0;
+}
+.new-movie-genre:hover .new-movie-genre-list {
+    display: block;
+}
+.new-movie-genre:hover {
+    color: #46E1FF;
+    background-color: #191919;
+}
+
+.new-movie-genre-item {
+    display: flex;
+    justify-content: space-between;
+    width: 340px;
+    height: 50px;
+    padding: 6px 0;
+    border-bottom: 1px dashed #555;
+}
+.new-movie-genre-item:last-child {
+    border-bottom: none;
+}
+
+.new-movie-genre-item-detail {
+    display: flex;
+    align-items: center;
+}
+.new-movie-genre-item-detail:hover .new-movie-genre-item-name-vie {
+    color: #dacb46;
+}
+.new-movie-genre-item-detail:hover .new-movie-genre-item-img {
+    opacity: 0.8;
+}
+.new-movie-genre-item-img {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #CCC;
+}
+.genre-item-bg1 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12492/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg2 {
+    background: url('http://image.phimmoizz.net/film/12486/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg3 {
+    background: url('http://image.phimmoizz.net/film/12484/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg4 {
+    background: url('http://image.phimmoizz.net/film/12392/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg5 {
+    background: url('http://image.phimmoizz.net/film/8660/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg6 {
+    background: url('http://image.phimmoizz.net/film/12485/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg7 {
+    background:url('http://image.phimmoizz.net/film/12488/poster.small.jpg')  no-repeat center / cover ;
+}
+.genre-item-bg8 {
+    background: url('http://image.phimmoizz.net/film/12407/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg9 {
+    background: url('http://image.phimmoizz.net/film/8504/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg10 {
+    background: url('http://image.phimmoizz.net/film/12475/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg11 {
+    background: url('http://image.phimmoizz.net/film/12355/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg2-1 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12397/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg2-2 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12413/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg2-3 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12447/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg2-4 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12451/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg2-5 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12478/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg2-6 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12386/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg2-7 {
+    background:url('https://i3.wp.com/image.phimmoi.net/film/12445/poster.small.jpg')  no-repeat center / cover ;
+}
+.genre-item-bg2-8 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12490/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg2-9 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/11849/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg2-10 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12431/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg2-11 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12264/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg3-1 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12449/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg3-2 {
+    background:url('https://i3.wp.com/image.phimmoi.net/film/12418/poster.small.jpg')  no-repeat center / cover ;
+}
+.genre-item-bg3-3 {
+    background:url('https://i3.wp.com/image.phimmoi.net/film/12429/poster.small.jpg')  no-repeat center / cover ;
+}
+.genre-item-bg3-4 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/8179/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg3-5 {
+    background:url('https://i3.wp.com/image.phimmoi.net/film/12483/poster.small.jpg')  no-repeat center / cover ;
+}
+.genre-item-bg3-6 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12387/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg3-7 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12364/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg3-8 {
+    background:url('https://i3.wp.com/image.phimmoi.net/film/12370/poster.small.jpg')  no-repeat center / cover ;
+}
+.genre-item-bg3-9 {
+    background:url('https://i3.wp.com/image.phimmoi.net/film/12265/poster.small.jpg')  no-repeat center / cover ;
+}
+.genre-item-bg3-10 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12266/poster.small.jpg') no-repeat center / cover ;
+}
+.genre-item-bg3-11 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12354/poster.small.jpg') no-repeat center / cover ;
+}
+
+.new-movie-genre-item-text {
+    line-height: 12px;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    width: 220px;
+    padding-left: 10px;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: space-evenly;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.new-movie-genre-item-name-vie {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    color: #ddd;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.new-movie-genre-item-name-eng {
+    color: #666;
+    padding-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    text-align: left;
+}
+.new-movie-genre-item-duration {
+    font-size: 12px;
+    line-height: 12px;
+    color: #666;
+    padding-top: 4px;
+}
+
+/* movie table */
+.movie-table {
+    margin-bottom: 24px;
+    margin-right: 6px;
+}
+.movie-table-item {
+    height: 280px;
+    background-color: #1c1c1c;
+    border-bottom: 1px solid #868489;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.movie-table-item-img {
+    height: 100%;
+    width: 100%;
+}
+.movie-table-item-img:hover {
+    opacity: 0.5;
+}
+.movie-table-item-bg1 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12392/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg2 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/8660/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg3 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12488/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg4 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12355/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg5 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12405/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg6 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/10874/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg7 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/9236/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg8 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12403/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg2-1 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12494/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg2-2 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12495/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg2-3 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12493/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg2-4 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12492/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg2-5 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12491/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg2-6 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12486/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg2-7 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12484/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg2-8 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12392/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg3-1 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12397/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg3-2 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12413/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg3-3 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12447/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg3-4 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12451/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg3-5 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12478/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg3-6 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12386/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg3-7 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12445/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg3-8 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12490/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg3-9 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/11849/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg3-10 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12431/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg3-11 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12449/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg3-12 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12264/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg4-1 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/11294/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg4-2 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/11897/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg4-3 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/11624/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg4-4 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12298/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg4-5 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12080/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg4-6 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/8199/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg4-7 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12465/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg4-8 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/11298/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg4-9 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12323/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg4-10 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12076/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg4-11 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/11293/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-bg4-12 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12297/poster.thumb.jpg') no-repeat center / cover ;
+}
+.movie-table-item-text {
+    margin: 5px;
+}
+.movie-table-item-text-name-vie {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    color: #44e2ff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 4px;
+}
+.movie-table-item-text-name-vie:hover , .movie-table-item-text-name-eng:hover {
+    color:#dacb46 ;
+}
+.movie-table-item-text-name-eng {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    line-height: normal;
+    color: #ccc;
+    font-size: 12px;
+}
+.movie-table-item-text-duration {
+    font-size: 12px;
+    color: #777;
+    line-height: normal;
+}
+.movie-table-item-quality {
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    color: #fff;
+    background: #A21D0A;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px;
+    text-shadow: 1px 1px 2px #111;
+    white-space: nowrap;
+    display: inline-block;
+    box-shadow: 2px 2px 3px 0px rgb(0,0,0,0.75);
+}
+.movie-table-item-quality::after {
+    content: "";
+    border-width: 10px 12px;
+    border-style: solid;
+    border-color: transparent transparent transparent #A21D0A;
+    position: absolute;
+    left: 100%;
+    top: 0.4px;
+}
+/* Right side */
+.body-right-side {
+    margin-left: 16px;
+}
+/* box 1 */
+.right-side-box1 {
+    margin-bottom: 20px;
+}
+.right-side-main-title {
+    display: flex;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.right-side-main-title-text {
+    color: #dacb46;
+    text-shadow: 1px 1px 1px #1a1a1a;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-left: 6px;
+    font-weight: 600;
+}
+.right-side-line2 {
+    font-size: 14px !important;
+    font-weight: bold;
+    color: #DDD;
+    border-bottom: 1px solid #868489;
+    border-radius: 4px;
+    width: 300px;
+    background-color: #1b1b1b;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+.right-side-line2:hover {
+    color: #FFF;
+    text-shadow: 1px 1px 2px #333;
+}
+.right-side-line3 {
+    background-color: #fff;
+    height: 20px;
+    width: 300px;
+}
+/* box 2 */
+.right-side-box2 {
+    margin-bottom: 30px;
+}
+.right-side-box3 {
+    margin-bottom: 50px;
+}
+.right-side-box4 {
+    margin-bottom: 30px;
+}
+.outstanding-tags {
+    margin-bottom: 30px;
+}
+.box-movie-wrapper {
+    border-radius: 4px;
+    color: #fff;
+    font-size: 11px;
+    border-bottom: 1px solid #868489;
+    padding: 5px;
+    background-color: #1b1b1b;
+}
+.box-movie-list {
+    background-color: #1b1b1b;
+    height: 477px;
+    overflow-x: auto;
+}
+/* scroll bar */
+.box-movie-list::-webkit-scrollbar-thumb {
+    background-color: rgb(85, 85, 85);
+    border-radius: 7px;
+}
+.box-movie-list::-webkit-scrollbar-track {
+    background-color: rgb(51, 51, 51);
+    border-radius: 7px;
+}
+.box-movie-list::-webkit-scrollbar {
+    width: 7px;
+}
+/* end scroll bar */
+.box-movie-item {
+    display: flex;
+    padding: 9px 5px;
+    cursor: pointer;
+    border-bottom: 1px solid #333;
+}
+
+.box-movie-item-img {
+    border: 2px solid #999;
+    border-radius: 3px;
+    width: 100px;
+    height: 133px;
+}
+.box-movie-item:hover .box-movie-item-img {
+    opacity: 0.7;
+}
+.box-movie-item-bg1 {
+
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12467/poster.small.jpg') no-repeat center / cover;
+}
+.box-movie-item-bg2 {
+
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12393/poster.small.jpg') no-repeat center / cover;
+}
+.box-movie-item-bg3 {
+
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12487/poster.small.jpg') no-repeat center / cover;
+}
+.box-movie-item-bg4 {
+
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12328/poster.small.jpg') no-repeat center / cover;
+}
+.box-movie-item-bg5 {
+
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12378/poster.small.jpg') no-repeat center / cover;
+}
+.box-movie-item-bg6 {
+
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12473/poster.small.jpg') no-repeat center / cover;
+}
+.box-movie-item-bg7 {
+
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12001/poster.small.jpg') no-repeat center / cover;
+}
+.box-movie-item-bg8 {
+
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12468/poster.small.jpg') no-repeat center / cover;
+}
+.box-movie-item-bg9 {
+
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12099/poster.small.jpg') no-repeat center / cover;
+}
+.box-movie-item-bg10 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12338/poster.small.jpg') no-repeat center / cover;
+    
+}
+.box-movie-item-bg11 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12463/poster.small.jpg') no-repeat center / cover;
+
+}
+.box-movie-item-bg12 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12267/poster.small.jpg') no-repeat center / cover;
+    
+}
+.box-movie-item-bg13 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/5025/poster.small.jpg') no-repeat center / cover;
+
+}
+.box-movie-item-bg14 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12002/poster.small.jpg') no-repeat center / cover;
+    
+}
+.box-movie-item-bg15 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12394/poster.small.jpg') no-repeat center / cover;
+
+}
+.box-movie-item-bg16 {
+    background:url('https://i3.wp.com/image.phimmoi.net/film/12404/poster.small.jpg')  no-repeat center / cover;
+    
+}
+.box-movie-item-bg17 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/11998/poster.small.jpg') no-repeat center / cover;
+
+}
+.box-movie-item-bg18 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12359/poster.small.jpg') no-repeat center / cover;
+    
+}
+.box-movie-item-bg19 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12406/poster.small.jpg') no-repeat center / cover;
+
+}
+.box-movie-item-bg20 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12151/poster.small.jpg') no-repeat center / cover;
+    
+}
+.box-movie-item-bg2-1 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12123/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg2-2 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12011/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg2-3 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12198/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg2-4 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12072/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg2-5 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/55/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg2-6 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/7166/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg2-7 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12177/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg2-8 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12243/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg2-9 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/10358/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg2-10 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12126/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg2-11 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/11946/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg2-12 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12152/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg2-13 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/300/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg2-14 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/1869/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg2-15 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/9578/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-1 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/7004/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-2 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/665/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-3 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12252/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-4 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/2297/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-5 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/4997/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-6 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/162/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-7 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/2844/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-8 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12260/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-9 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12275/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-10 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/2296/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-11 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12206/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-12 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12171/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-13 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12288/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-14 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/12130/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-bg3-15 {
+    background: url('https://i3.wp.com/image.phimmoi.net/film/10323/poster.small.jpg') no-repeat center / cover ; 
+}
+.box-movie-item-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.box-movie-item-name-vie {
+    font-size: 12px;
+    color: #46E1FF;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.box-movie-item:hover .box-movie-item-name-vie {
+    color: #dacb46;
+}
+.box-movie-item-name-eng {
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.box-movie-item-name-popular {
+    color: #46E1FF;
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.golden-star {
+    color: #ea9c00;
+}
+/* tag */
+.tags-wrapper {
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #868489;
+    padding: 5px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 11px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tags-item {
+    display: inline-flex;
+    align-items: center;
+    background-color: #586372;
+    padding-left: 3px;
+    position: relative;
+    margin: 4px 8px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+.tags-item::after {
+    content: "";
+    border-width: 12.5px 10px;
+    border-color: transparent transparent transparent #586372;
+    border-style: solid;
+    position: absolute;
+    left: 100%;
+    top: -0.2px;
+}
+.tags-name {
+    font-size: 11px;
+    color: #fff;
+    padding: 0 5px;
+    line-height: 25px;
+}
+.tags-name:hover {
+    color: #dacb46;
+    cursor: pointer;
+}
+.tags-dot-icon {
+    color: #1b1b1c;
+    font-size: 20px;
+    cursor: default;
+}
+/* star profile */
+.star-profile {
+    padding: 5px;
+    border-bottom: 1px solid #868489;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 11px;
+    width: 300px;
+    background-color: #191919;
+}
+.star-profle-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.star-profle-item:last-child {
+    margin-bottom: 4px;
+}
+.star-profle-item-img {
+    width: 290px;
+    height: 180px;
+    display: block;
+}
+.star-profle-item:hover .star-profle-item-img {
+    opacity: 0.7;
+}
+.star-profle-item-bg1 {
+    background: url('http://image.phimmoizz.net/profile/16652/medium.jpg') no-repeat center / cover ;
+}
+.star-profle-item-bg2 {
+    background: url('http://image.phimmoizz.net/profile/20469/medium.jpg') no-repeat center / cover ;
+}
+.star-profle-item-name {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #44e2ff;
+    padding: 15px 0px 5px;
+}
+.star-profle-item:hover .star-profle-item-name {
+    color: #dacb46;
+}
+/* footer */
+.footer {
+    min-height: 100px;
+    padding: 20px 25px 15px;
+    border-top: 3px solid #dacb46;
+    border-bottom: 1px solid #111;
+    background-color: #1a1a1a;
+}
+.footer-content {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.footer-logo {
+    height: 55px;
+    min-width: 200px;
+    background: url(../img/footer-logo.png) no-repeat center / contain ;    
+}
+.footer-intro {
+    display: flex;
+}
+.footer-intro-list {
+    margin-right: 60px;
+    padding-top: 20px;
+}
+.footer-intro-main-title {
+    color: #44E2FF;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 20px;
+}
+.footer-intro-item {
+    color: #fff;
+    display: block;
+    padding: 5px 0px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.footer-intro-item:hover {
+    color: #dacb46;
+}
+.footer-contact {
+    margin-top: 10px;
+}
+.footer-contact-line1 {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+.footer-contact-line2 {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.footer-contact-line2-mail {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+.footer-contact-line3 {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+.footer-contact-line4 {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+}
