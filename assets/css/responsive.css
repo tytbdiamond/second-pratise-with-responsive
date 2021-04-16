@@ -41,6 +41,9 @@
     .new-movie-genre:hover {
         margin-bottom: 600px;
     }
+    .new-movie-list-tab {
+        margin-left: 0;
+    }
 }
 
 
@@ -75,6 +78,9 @@
     }
     .new-movie-genre:hover {
         margin-bottom: 600px;
+    }
+    .new-movie-list-tab {
+        margin-left: 0;
     }
 }
 /* Tablet */
