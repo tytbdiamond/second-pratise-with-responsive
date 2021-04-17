@@ -152,6 +152,7 @@ html {
 .body {
     background-color: #545256;
     padding-bottom: 30px;
+    overflow: hidden;
 }
 .body-content {
     width: 980px;

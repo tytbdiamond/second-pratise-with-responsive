@@ -42,7 +42,7 @@
         margin-bottom: 600px;
     }
     .new-movie-list-tab {
-        margin-left: 0;
+        margin-left: 0 !important;
     }
 }
 
@@ -80,7 +80,7 @@
         margin-bottom: 600px;
     }
     .new-movie-list-tab {
-        margin-left: 0;
+        margin-left: 0 !important;
     }
 }
 /* Tablet */
